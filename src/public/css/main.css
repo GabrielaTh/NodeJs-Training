@@ -1,0 +1,26 @@
+body {
+    background: #8E2DE2;
+    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
+    background: linear-gradient(to right, #4A00E0, #8E2DE2);
+}
+
+.logo{
+    width: 30%;
+}
+
+#color-note{
+    background-color: rgb(44, 43, 43);
+}
+
+
+#text-menu {
+    color:white;
+}
+
+#text-menu:hover{
+    color:rgb(29, 25, 25);
+}
+
+#navbar{
+    background-color: rgb(24, 22, 22) !important;
+}
