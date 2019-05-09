@@ -1,26 +1,40 @@
 body {
-    background: #8E2DE2;
-    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
-    background: linear-gradient(to right, #4A00E0, #8E2DE2);
+    background: #9796f0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fbc7d4, #9796f0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fbc7d4, #9796f0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    
 }
 
-.logo{
-    width: 30%;
+.logo {
+    width: 45%;
 }
 
-#color-note{
+#color-note {
     background-color: rgb(44, 43, 43);
 }
 
 
 #text-menu {
-    color:white;
+    color: white;
 }
 
-#text-menu:hover{
-    color:rgb(29, 25, 25);
+#text-menu:hover {
+    color: rgb(29, 25, 25);
 }
 
-#navbar{
-    background-color: rgb(24, 22, 22) !important;
+#navbar {
+    background-color: rgb(14, 12, 12) !important;
+}
+
+#kory {
+    height: 35px;
+}
+
+.nav-link {
+    color: aliceblue !important;
+}
+
+#navbarDropdown {
+    font-size: 23px;
 }

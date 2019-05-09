@@ -1,16 +1,18 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="navbar">
-    <a class="navbar-brand" href="/">Kory Notes</a>
+    <a class="navbar-brand" href="/">
+    <img src="/img/Kory-1.png" alt="logo" id="kory">
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse text-center" id="navbarNav">
         <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+                <a class="nav-link" href="/"><h4>Home</h4></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/about">About</a>
+                <a class="nav-link" href="/about"><h4>About</h4></a>
             </li>
         </ul>
         <ul class="navbar-nav ml-auto">
@@ -21,18 +23,18 @@
                     Notes
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="color-note" >
-                    <a class="dropdown-item" href="/notes" id="text-menu">All Notes</a>
-                    <a class="dropdown-item" href="/notes/add" id="text-menu">Add a Note</a>
+                    <a class="dropdown-item" href="/notes" id="text-menu"><h5>All Notes</h5></a>
+                    <a class="dropdown-item" href="/notes/add" id="text-menu"><h5>Add a Note</h5></a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="/users/logout" id="text-menu">Logout</a>
+                    <a class="dropdown-item" href="/users/logout" id="text-menu"><h5>Logout</h5></a>
                 </div>
             </li>
             {{else}}
             <li class="nav-item">
-                <a class="nav-link" href="/users/signin">Login</a>
+                <a class="nav-link" href="/users/signin"><h4>Login</h4></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/users/signup">Register</a>
+                <a class="nav-link" href="/users/signup"><h4>Register</h4></a>
             </li>
             {{/if}}
         </ul>
