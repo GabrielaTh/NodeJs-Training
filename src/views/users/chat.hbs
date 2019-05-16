@@ -1,0 +1,34 @@
+<div class="d-flex container rounded pt-3" id="chat">
+    <div class="col-10 ">
+        <h1 class="display-5 text-center">Chat</h1>
+        <div class="container rounded p-4 m-2" id="box-chat">
+            {{#each messages}}
+            <h6><b>{{user}}</b>
+                {{message}}</h6>
+            <br>
+            {{/each}}
+        </div>
+        <form class="input-group mb-3" action="/users/chat/message" method="POST">
+            <input type="text" class="form-control" placeholder="Type your messages here..." name="message" 
+                autofocus required>
+            <button class="btn btn-dark" type="submit" id="btn">Send</button>
+        </form>
+    </div>
+    <div class="col-1 p-1">
+        <table class="table table-borderless">
+            <thead>
+                <th>Users</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{user.name}}</td>
+                    <td>connected</td>
+                </tr>
+                <tr>
+                    <td>Jacob</td>
+                    <td>Disconnected</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

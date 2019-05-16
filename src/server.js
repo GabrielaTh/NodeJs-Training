@@ -6,13 +6,15 @@ const session = require('express-session');
 const flash = require('connect-flash');
 const passport = require('passport');
 
+
+
 //Initialiazations
 const app = express();
 require('./database');
 require('./config/passport');
 
 //Settings
-app.set('port', process.env.PORT || 3000);
+// app.set('port', process.env.PORT || 3000);
 
 app.set('views', path.join(__dirname, 'views'));
 
@@ -37,6 +39,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 
+
 //Global variables
 app.use((req, res, next) => {
     res.locals.success_msg = req.flash('success_msg');
@@ -51,12 +54,31 @@ app.use((req, res, next) => {
 app.use(require('./routes/index'));
 app.use(require('./routes/users'));
 app.use(require('./routes/notes'));
+app.use(require('./routes/chat'));
+
 
 //Static files
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'routes')));
+
 
 
 //Server
-app.listen(app.get('port'), () => {
-    console.log('Server on port', app.get('port'));
-})
+
+server = app.listen(3000, () => {
+    console.log('Server is running on port', server.address().port);
+});
+
+//Socket
+var io = require('socket.io')(server);
+
+io.on('connect', (socket) => {
+
+console.log('User connected');
+
+});
+
+
+
+
+

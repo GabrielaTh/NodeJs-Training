@@ -1,6 +1,6 @@
 {{#if error}}
-<div class="alert alert-dismissible alert-danger rounded" role="alert">
-    {{error}}
+<div class="alert alert-dismissible alert-primary rounded" role="alert">
+    <h5>{{error}}</h5>
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
   </button>
@@ -8,7 +8,7 @@
 {{/if}}
 
 {{#each errors }}
-<div class="alert alert-warning alert-dismissible fade show" role="alert">
+<div class="alert alert-primary alert-dismissible fade show" role="alert">
     {{text}}
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
     <span aria-hidden="true">&times;</span>
